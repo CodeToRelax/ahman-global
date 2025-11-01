@@ -55,7 +55,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
               </Link>
             ))}
             <LanguageSelector />
