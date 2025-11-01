@@ -96,8 +96,8 @@ const HeroCarousel = () => {
             key={index}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === selectedIndex
-                ? 'bg-primary w-6'
-                : 'bg-gray-400 hover:bg-white'
+                ? 'bg-white w-6'
+                : 'bg-white/60 hover:bg-white/80'
             }`}
             onClick={() => scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}

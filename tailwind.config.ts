@@ -64,6 +64,7 @@ export default {
       fontFamily: {
         arabic: ['Noto Sans Arabic', 'sans-serif'],
         english: ['Inter', 'sans-serif'],
+        logo: ['Cinzel', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

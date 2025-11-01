@@ -34,13 +34,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src="/logo.jpeg" 
-              alt="Maedat Al Rahman" 
-              className="h-14 w-14 object-contain rounded-lg"
-            />
-            <span className={`font-bold text-xl ${isScrolled ? 'text-navy' : 'text-white'} transition-colors`}>
+          <Link to="/" className="flex items-center">
+            <span className={`font-logo text-2xl md:text-3xl font-bold tracking-wider ${isScrolled ? 'text-navy' : 'text-white'} transition-colors`}>
               {dir === 'rtl' ? 'مائدة الرحمن' : 'Maedat Al Rahman'}
             </span>
           </Link>
