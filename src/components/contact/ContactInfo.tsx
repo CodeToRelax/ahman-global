@@ -1,5 +1,5 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { MapPin, Phone, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactInfo = () => {
   const { t } = useLanguage();
@@ -7,28 +7,28 @@ const ContactInfo = () => {
   const contactItems = [
     {
       icon: MapPin,
-      label: t('contact.info.address'),
-      value: t('contact.info.address.value'),
-      link: 'https://maps.google.com/?q=32.1181,20.0681',
+      label: t("contact.info.address"),
+      value: t("contact.info.address.value"),
+      link: "https://maps.google.com/?q=32.1181,20.0681",
     },
     {
       icon: Phone,
-      label: t('contact.info.phone'),
-      value: '(+218) 920878736',
-      link: 'tel:+218920878736',
+      label: t("contact.info.phone"),
+      value: "(+218) 915307777",
+      link: "tel:+218920878736",
     },
     {
       icon: Mail,
-      label: t('contact.info.email'),
-      value: 'test@gmail.com',
-      link: 'mailto:test@gmail.com',
+      label: t("contact.info.email"),
+      value: "info@maidaa.ly",
+      link: "mailto:info@maidaa.ly",
     },
   ];
 
   return (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold text-navy mb-6">
-        {t('contact.info.title')}
+        {t("contact.info.title")}
       </h3>
       {contactItems.map((item, index) => (
         <div
@@ -44,8 +44,8 @@ const ContactInfo = () => {
               <a
                 href={item.link}
                 className="text-muted-foreground hover:text-primary transition-colors"
-                target={item.icon === MapPin ? '_blank' : undefined}
-                rel={item.icon === MapPin ? 'noopener noreferrer' : undefined}
+                target={item.icon === MapPin ? "_blank" : undefined}
+                rel={item.icon === MapPin ? "noopener noreferrer" : undefined}
               >
                 {item.value}
               </a>
