@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import translationsAr from '../translations/ar';
+import translationsEn from '../translations/en';
 
 type Language = 'ar' | 'en';
 
@@ -33,7 +35,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [language]);
 
   const t = (key: string): string => {
-    const translations = language === 'ar' ? require('../translations/ar').default : require('../translations/en').default;
+    const translations = language === 'ar' ? translationsAr : translationsEn;
     return translations[key] || key;
   };
 
