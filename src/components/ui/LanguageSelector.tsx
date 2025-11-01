@@ -13,7 +13,7 @@ const LanguageSelector = () => {
         className={`text-xs font-medium px-3 ${
           language === 'ar' 
             ? 'bg-primary text-white hover:bg-primary/90' 
-            : 'text-navy hover:bg-white/20'
+            : 'text-white hover:bg-white/20'
         }`}
       >
         العربية
@@ -25,7 +25,7 @@ const LanguageSelector = () => {
         className={`text-xs font-medium px-3 ${
           language === 'en' 
             ? 'bg-primary text-white hover:bg-primary/90' 
-            : 'text-navy hover:bg-white/20'
+            : 'text-white hover:bg-white/20'
         }`}
       >
         EN
