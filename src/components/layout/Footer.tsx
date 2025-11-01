@@ -11,14 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/logo.jpeg" 
-                alt="Maedat Al Rahman" 
-                className="h-12 w-12 object-contain rounded-lg"
-              />
-              <h3 className="text-xl font-bold">{t('footer.company')}</h3>
-            </div>
+          <div className="mb-4">
+            <Link to="/" className="inline-block">
+              <span className="font-logo text-2xl font-bold tracking-wider text-white">
+                {dir === 'rtl' ? 'مائدة الرحمن' : 'Maedat Al Rahman'}
+              </span>
+            </Link>
+          </div>
             <p className="text-white/80 text-sm">
               {t('footer.description')}
             </p>
