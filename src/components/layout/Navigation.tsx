@@ -48,7 +48,7 @@ const Navigation = () => {
                 to={item.path}
                 className={`font-medium transition-colors relative group pb-1 ${
                   location.pathname === item.path
-                    ? 'text-primary'
+                    ? 'text-white'
                     : isScrolled
                     ? 'text-navy hover:text-primary'
                     : 'text-white hover:text-primary-light'
