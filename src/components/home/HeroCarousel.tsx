@@ -81,47 +81,23 @@ const HeroCarousel = () => {
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
+              {/* Subtle Vignette Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30" />
 
-              {/* Content */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
-                <div className="text-center space-y-6 animate-fade-in-up">
-                  <h1 
-                    className="text-5xl md:text-7xl font-bold mb-4"
-                    style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}
-                  >
-                    {t(slide.titleKey)}
-                  </h1>
-                  <p 
-                    className="text-2xl md:text-4xl font-light"
-                    style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}
-                  >
-                    {t(slide.subtitleKey)}
-                  </p>
-                </div>
-
-                {/* Scroll Indicator - Only on first slide */}
-                {selectedIndex === 0 && (
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                    <ChevronDown className="h-8 w-8 text-white/70" />
-                  </div>
-                )}
-              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Dot Navigation */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === selectedIndex
-                ? 'bg-primary w-8'
-                : 'bg-white/50 hover:bg-white/75'
+                ? 'bg-primary w-6'
+                : 'bg-gray-400 hover:bg-white'
             }`}
             onClick={() => scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}
