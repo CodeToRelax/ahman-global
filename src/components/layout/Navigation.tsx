@@ -46,7 +46,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-colors relative group ${
+                className={`font-medium transition-colors relative group pb-1 ${
                   location.pathname === item.path
                     ? 'text-primary'
                     : isScrolled
@@ -55,7 +55,9 @@ const Navigation = () => {
                 }`}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
+                <span className={`absolute bottom-[-4px] left-0 h-0.5 bg-white transition-all ${
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`} />
               </Link>
             ))}
             <LanguageSelector />
